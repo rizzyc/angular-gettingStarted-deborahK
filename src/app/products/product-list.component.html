@@ -19,12 +19,12 @@
                     <th>Product</th>
                     <th>Code</th>
                     <th>Available</th>
-                    <th>Prrice</th>
+                    <th>Price</th>
                     <th>5 Star Rating</th>
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor='let product of products'>
+                <tr *ngFor='let product of filteredProducts'>
                     <td><img *ngIf='showImage' [src]='product.imageUrl' [title]='product.productName'
                         [style.width.px]='imageWidth'
                         [style.margin.px]='imageMargin'
