@@ -18,6 +18,14 @@ export class ProductService {
             catchError(this.handleError)
         );
     }
+    // I wanted the service to return only one object, but i'll try the alternate method of returning it
+    // in the detail componenet
+    getProduct(id: number): Observable<IProduct[]> {
+        return this.http.get<IProduct[]>(this.productUrl).pipe(
+            tap(data => console.log(data.filter(product => product.productId === id))),
+            catchError(this.handleError)
+        );
+    }
 
     private handleError(err: HttpErrorResponse) {
         let errorMessage = '';
