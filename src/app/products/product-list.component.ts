@@ -2,13 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { IProduct } from './product';
 import { ProductService } from './product.service';
 @Component({
-    selector: 'pm-products',
     templateUrl: './product-list.component.html',
     styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
     pageTitle = 'Product List';
+// tslint:disable-next-line: no-inferrable-types
     imageWidth: number = 50;
+// tslint:disable-next-line: no-inferrable-types
     imageMargin: number = 2;
     showImage: boolean = false;
     _listFilter: string;
